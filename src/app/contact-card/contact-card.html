@@ -1,0 +1,36 @@
+<div class="card" (click)="selectContact.emit(contact)"
+ *ngIf="contact">
+  <div class="card-header">
+    <h3><span class="label">Name:</span> {{ contact.name }}</h3>
+    <span class="username">@{{ contact.username }}</span>
+  </div>
+
+  <div class="card-body">
+    <div class="info-row">
+      <span class="label">Email:</span>
+      <span class="value" dir="ltr">{{ contact.email }}</span>
+    </div>
+
+    <div class="info-row">
+      <span class="label">Phone:</span>
+      <span class="value" dir="ltr">{{ contact.phone }}</span>
+    </div>
+
+    <div class="info-row">
+      <span class="label">Address:</span>
+      <span class="value">{{ contact.address.street }}, {{ contact.address.suite }}, {{ contact.address.city }}, {{ contact.address.zipcode }}</span>
+    </div>
+
+
+    <div class="info-row">
+      <span class="label">Organization:</span>
+      <span class="value">{{ contact.company.name }}</span>
+    </div>
+  </div>
+
+  <div class="card-footer">
+    <a [href]="'https://' + contact.website" target="_blank" class="website-link">
+      {{ contact.website }} ↗
+    </a>
+  </div>
+</div>

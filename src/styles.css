@@ -1,1 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  margin: 0;
+  background-color: #fdf8f4; /* שמנת חמימה ורכה */
+  background-image: radial-gradient(#f3e5d8 1px, transparent 1px);
+  background-size: 24px 24px;
+}
